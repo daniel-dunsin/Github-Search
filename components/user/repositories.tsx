@@ -3,11 +3,13 @@ import { useAppContext } from "../../context";
 import { languagesColor } from "../../public/resources/languagesColor";
 import { BiStar } from "react-icons/bi";
 import { sliceDate } from "../../utils/sliceDate";
+import { PageTitle } from "../../utils/PageTitle";
 
 const Repositories = () => {
   const { userResults } = useAppContext();
   return (
     <section className="flex flex-col border-t border-gray-400">
+      <PageTitle title={`${userResults?.user?.name} repositories`} />
       {userResults?.repositories?.map((repo, index: number) => {
         return (
           <article

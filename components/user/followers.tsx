@@ -2,12 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { useAppContext } from "../../context";
+import { PageTitle } from "../../utils/PageTitle";
 
 const Followers = () => {
   const { userResults } = useAppContext();
 
   return (
     <section className="flex flex-col border-t border-gray-400">
+      <PageTitle title={`${userResults?.user?.name} Followers`} />
       {userResults?.followers?.map((followers, index: number) => {
         return (
           <article

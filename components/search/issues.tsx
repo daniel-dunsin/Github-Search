@@ -2,10 +2,12 @@ import React from "react";
 import { useAppContext } from "../../context";
 import { BiGitBranch } from "react-icons/bi";
 import { sliceDate } from "../../utils/sliceDate";
+import { PageTitle } from "../../utils/PageTitle";
 const Issues = () => {
   const { searchResults } = useAppContext();
   return (
     <section>
+      <PageTitle title="Issues Result" />
       {searchResults?.issues?.length === 0 && (
         <div className="min-h-[300px] flex justify-center items-center p-2 text-white font-karla text-[24px] tracking-wide font-bold">
           No issues found

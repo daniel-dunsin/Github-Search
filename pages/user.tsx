@@ -72,7 +72,7 @@ const User = () => {
         </div>
         {userResults?.user?.blog && (
           <a
-            href={userResults?.user?.blog}
+            href={`https://${userResults?.user?.blog}`}
             className="flex flex-row gap-x-2 mt-2 text-gray-300 items-center hover:text-blue-400 hover:underline"
           >
             <span>

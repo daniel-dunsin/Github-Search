@@ -27,13 +27,13 @@ export default function Home() {
             </span>
           </p>
           <form
-            className="flex flex-row gap-x-2 items-center bg-secondary-dark text-white border-2 border-gray-500 px-4 rounded-md py-2 w-[90vw] max-w-[300px]"
+            className="flex flex-row gap-x-2 bg-secondary-dark text-white border-2 border-gray-500 rounded-md w-[90vw] max-w-[300px]"
             onSubmit={handleFormSubmit}
           >
             <input
               type="text"
               placeholder="Search Github"
-              className="text-gray-200 bg-transparent text-[15px] outline-none flex-[0.9]"
+              className="text-gray-200 bg-transparent text-[15px] outline-none py-2 px-4 flex-[0.9]"
               value={searchParam}
               onChange={(e: ChangeEvent<HTMLInputElement>) => {
                 updateSearch(e.target.value);
@@ -41,7 +41,7 @@ export default function Home() {
             />
             <button
               type="submit"
-              className="flex-[0.1] flex justify-end items-center"
+              className="flex-[0.1] flex justify-end items-center hover:bg-[royalblue] px-2"
             >
               <BsSearch />
             </button>

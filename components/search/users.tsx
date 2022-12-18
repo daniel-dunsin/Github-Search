@@ -2,11 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { useAppContext } from "../../context";
+import { PageTitle } from "../../utils/PageTitle";
 
 const Users = () => {
   const { searchResults } = useAppContext();
   return (
     <section>
+      <PageTitle title="Users Result" />
       {searchResults?.users?.length === 0 && (
         <div className="min-h-[300px] flex justify-center items-center p-2 text-white font-karla text-[24px] tracking-wide font-bold">
           No user found

@@ -1,11 +1,13 @@
 import React from "react";
 import { useAppContext } from "../../context";
+import { PageTitle } from "../../utils/PageTitle";
 import { sliceDate } from "../../utils/sliceDate";
 const Topics = () => {
   const { searchResults } = useAppContext();
 
   return (
     <section>
+      <PageTitle title="Topics Result" />
       {searchResults?.topics?.length === 0 && (
         <div className="min-h-[300px] flex justify-center items-center p-2 text-white font-karla text-[24px] tracking-wide font-bold">
           No topics found

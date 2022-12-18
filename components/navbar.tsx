@@ -41,19 +41,22 @@ const Navbar: FC = () => {
             router.pathname === "/"
               ? "md:flex hidden bg-secondary-dark"
               : "flex bg-main-dark"
-          } flex-row gap-x-2  text-white border-2 border-gray-500 px-4 rounded-md py-2`}
+          } flex-row gap-x-2  text-white border-2 border-gray-500 rounded-md`}
           onSubmit={handleNavbarFormSubmit}
         >
           <input
             type="text"
             placeholder="Search Github"
-            className="text-gray-200 bg-transparent text-[15px] outline-none placeholder:text-gray-200"
+            className="text-gray-200 bg-transparent text-[15px] py-2 px-4 outline-none flex-[0.8] placeholder:text-gray-200"
             value={navbarSearchParam}
             onChange={(e: ChangeEvent<HTMLInputElement>) => {
               updateNavbarSearch(e.target.value);
             }}
           />
-          <button type="submit">
+          <button
+            type="submit"
+            className="hover:bg-[royalblue] flex-[0.2] w-full flex px-2 justify-center items-center"
+          >
             <BsSearch />
           </button>
         </form>
